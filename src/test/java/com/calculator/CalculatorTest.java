@@ -23,4 +23,20 @@ public class CalculatorTest {
 
         assertEquals(a-b, result);
     }
+    @Test
+    public void testMultiply(){
+        int a = 11;
+        int b = 12;
+        int result = calculator.multiply(a, b);
+
+        assertEquals(a*b, result);
+    }
+    @Test
+    public void testMultiplyByZero(){
+        int a = 100;
+        int b = 0;
+        int result = calculator.multiply(a, b);
+        assertEquals(a*b, result);
+    }
+
 }
