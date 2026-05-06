@@ -38,5 +38,21 @@ public class CalculatorTest {
         int result = calculator.multiply(a, b);
         assertEquals(a*b, result);
     }
+    @Test
+    public void testDivideHappySenario(){
+        int a = 100;
+        int b = 10;
+        int result = calculator.divide(a, b);
+
+        assertEquals(a/b, result);
+    }
+    @Test
+    public void testDivideByZero(){
+        int a = 100;
+        int b = 0;
+        assertThrows(IllegalArgumentException.class, () -> {
+            calculator.divide(a, b);
+        });
+    }
 
 }
